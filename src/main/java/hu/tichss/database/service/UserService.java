@@ -3,8 +3,10 @@ package hu.tichss.database.service;
 import hu.tichss.database.persistence.entity.User;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface UserService {
-    User getById(Long id);
+    Optional<User> getById(Long id);
     List<User> getAll();
+    User save(final User user);
 }
